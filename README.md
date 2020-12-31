@@ -1,2 +1,2 @@
-# Gen-Symbols
-Port of Generate-Symbols from Matlab to Julia
+# 5G-Port
+Port of Generate-Symbols 5G-ATW tool from Matlab to Julia
