@@ -1,0 +1,48 @@
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/jovyan");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/opt/conda/lib/python3.8/site-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+% normal 0x04C11DB7
+PN=[32 26 23 22 16 12 11 10 8 7 5 4 2 1 0];
+_make_figures("/tmp/tmp5_g31tow", "png", "Figure", -1, -1, 0, 0)
+% normal 0x04C11DB7
+PN=[32 26 23 22 16 12 11 10 8 7 5 4 2 1 0];
+_make_figures("/tmp/tmpa4y89ab8", "png", "Figure", -1, -1, 0, 0)
+PN=[32 26 23 22 16 12 11 10 8 7 5 4 2 1 0];
+_make_figures("/tmp/tmprzmez6wx", "png", "Figure", -1, -1, 0, 0)
+# Octave 5.2.0, Wed Dec 30 22:33:43 2020 UTC <jovyan@aa81b90ed3c5>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/jovyan");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/opt/conda/lib/python3.8/site-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+PN
+_make_figures("/tmp/tmp1wra8kc3", "png", "Figure", -1, -1, 0, 0)
+PN=[32 26 23 22 16 12 11 10 8 7 5 4 2 1 0];
+_make_figures("/tmp/tmpsh8sik41", "png", "Figure", -1, -1, 0, 0)
+PN=[32 26 23 22 16 12 11 10 8 7 5 4 2 1 0]
+_make_figures("/tmp/tmp6lcwtsvm", "png", "Figure", -1, -1, 0, 0)
+SD = hex2dec('0001')
+_make_figures("/tmp/tmpjteogw05", "png", "Figure", -1, -1, 0, 0)
+SD = hex2dec('1001')
+_make_figures("/tmp/tmpejopuh24", "png", "Figure", -1, -1, 0, 0)
+SD = hex2dec('0x1001')
+_make_figures("/tmp/tmpbjkn6rnx", "png", "Figure", -1, -1, 0, 0)
+SD = hex2dec('000F')
+_make_figures("/tmp/tmp8vnmnxf7", "png", "Figure", -1, -1, 0, 0)
+SD = hex2dec('00000001')
+_make_figures("/tmp/tmpmtigzi6d", "png", "Figure", -1, -1, 0, 0)
+# Octave 5.2.0, Thu Dec 31 01:28:53 2020 UTC <jovyan@aa81b90ed3c5>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/jovyan");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/opt/conda/lib/python3.8/site-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 5.2.0, Thu Dec 31 01:32:12 2020 UTC <jovyan@aa81b90ed3c5>
