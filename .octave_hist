@@ -46,3 +46,11 @@ graphics_toolkit('gnuplot')
 set(0, 'defaultfigurevisible', 'off');
 version
 # Octave 5.2.0, Thu Dec 31 01:32:12 2020 UTC <jovyan@aa81b90ed3c5>
+PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+graphics_toolkit
+more off; source ~/.octaverc; cd("/home/jovyan");PS1('PEXPECT_PROMPT>'); PS2('PEXPECT_PROMPT_')
+addpath("/opt/conda/lib/python3.8/site-packages/octave_kernel")
+graphics_toolkit('gnuplot')
+set(0, 'defaultfigurevisible', 'off');
+version
+# Octave 5.2.0, Thu Dec 31 19:18:40 2020 UTC <jovyan@aa81b90ed3c5>
