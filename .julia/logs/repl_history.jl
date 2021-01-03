@@ -228,3 +228,132 @@
 # time: 2020-12-31 23:40:54 UTC
 # mode: julia
 	common(3,5)
+# time: 2021-01-01 00:07:27 UTC
+# mode: julia
+	exit()
+# time: 2021-01-01 00:07:42 UTC
+# mode: julia
+	include("gen_symbols.jl")
+# time: 2021-01-01 00:07:58 UTC
+# mode: julia
+	methods(common)
+# time: 2021-01-01 00:11:26 UTC
+# mode: julia
+	include("gen_symbols.jl")
+# time: 2021-01-01 19:26:21 UTC
+# mode: julia
+	gen_symbols(3)
+# time: 2021-01-01 19:26:37 UTC
+# mode: julia
+	gen_symbols(2,3)
+# time: 2021-01-01 19:26:50 UTC
+# mode: julia
+	methods(gen_symbols)
+# time: 2021-01-01 21:34:58 UTC
+# mode: julia
+	include("gen_symbols.jl")
+# time: 2021-01-01 21:37:18 UTC
+# mode: julia
+	@doc(gen_symbols.jl)
+# time: 2021-01-01 21:37:26 UTC
+# mode: julia
+	@doc("gen_symbols.jl")
+# time: 2021-01-01 22:09:47 UTC
+# mode: shell
+	bash
+# time: 2021-01-01 22:20:51 UTC
+# mode: julia
+	\psi
+# time: 2021-01-01 22:21:04 UTC
+# mode: julia
+	Ψ
+# time: 2021-01-01 22:59:28 UTC
+# mode: julia
+	x::UInt32 = 32
+# time: 2021-01-01 22:59:53 UTC
+# mode: julia
+	module x
+	x::UInt32 = 32
+	end
+# time: 2021-01-01 23:16:58 UTC
+# mode: julia
+	sum(1/n^2 for n=1:1000)
+# time: 2021-01-01 23:17:09 UTC
+# mode: julia
+	sum(1/n^2 for n=1:10000)
+# time: 2021-01-01 23:17:20 UTC
+# mode: julia
+	sum(1/n^2 for n=1:1000000)
+# time: 2021-01-01 23:17:29 UTC
+# mode: julia
+	sum(1/n^2 for n=1:100000000)
+# time: 2021-01-01 23:19:00 UTC
+# mode: julia
+	function sum(1/n^2 for n=1:100000000) end
+# time: 2021-01-01 23:19:18 UTC
+# mode: julia
+	function s sum(1/n^2 for n=1:100000000) end
+# time: 2021-01-01 23:19:23 UTC
+# mode: julia
+	function s= sum(1/n^2 for n=1:100000000) end
+# time: 2021-01-01 23:20:08 UTC
+# mode: julia
+	function s
+	sum(1/n^2 for n=1:100000)
+# time: 2021-01-01 23:20:33 UTC
+# mode: julia
+	function s
+	sum(1/n^2 for n=1:100000) end
+# time: 2021-01-01 23:21:24 UTC
+# mode: julia
+	function tt()
+	sum(1/n^2 for n=1:100000)
+	end
+# time: 2021-01-01 23:21:46 UTC
+# mode: julia
+	using profile
+# time: 2021-01-01 23:22:15 UTC
+# mode: julia
+	Pkg.add("profile")
+# time: 2021-01-01 23:22:23 UTC
+# mode: julia
+	import Pkg
+# time: 2021-01-01 23:22:35 UTC
+# mode: julia
+	Pkg.add("profile")
+# time: 2021-01-01 23:22:56 UTC
+# mode: julia
+	Pkg.add("Profile")
+# time: 2021-01-01 23:23:17 UTC
+# mode: julia
+	@profile tt()
+# time: 2021-01-01 23:23:31 UTC
+# mode: julia
+	@Profile tt()
+# time: 2021-01-01 23:23:34 UTC
+# mode: julia
+	tt
+# time: 2021-01-01 23:23:40 UTC
+# mode: julia
+	tt()
+# time: 2021-01-01 23:23:52 UTC
+# mode: julia
+	@Profile tt()
+# time: 2021-01-01 23:24:20 UTC
+# mode: julia
+	using Profile
+# time: 2021-01-01 23:24:24 UTC
+# mode: julia
+	@Profile tt()
+# time: 2021-01-01 23:24:28 UTC
+# mode: julia
+	@Profile tt
+# time: 2021-01-01 23:24:35 UTC
+# mode: julia
+	@profile tt()
+# time: 2021-01-02 02:00:28 UTC
+# mode: julia
+	exit
+# time: 2021-01-02 02:00:33 UTC
+# mode: julia
+	exit()
