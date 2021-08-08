@@ -1,0 +1,103 @@
+#!/usr/bin/gawk -f
+# File: create_time_offset_table.gwk
+# need Cubic header
+# $Author: garciag $.
+# $Date: 2018-05-29 11:28:06 -0700 (Tue, 29 May 2018) $.
+# $LastChangeDate$.
+# $Revision: 2906 $.
+# $HeadURL: file://usbalp-nis01/Homedirs/svnrepos/balboa_repo/5G-ATW/trunk/Firmware/Tx%20Hopping%20Pattern/create_jitter_time_table.gwk $.# 
+
+# Takes output of atw_tx_pattern_gen.cc and creates 
+# strips everything except the channel numbers and 
+# converts from decimal to hex and extends out to 64 possible channels
+# setting the unused channels to decimal 63 0x3F
+# see example at end of file
+
+BEGIN {  # code that only run once at start of program
+	id_number = 0
+	overall_count = 0
+	File_count = 1
+	print "The files processed in order for the time jitter table are "
+	for (i = 1; i < ARGC; i++) {
+      print "    "ARGV[i]
+      }
+}
+
+{ 
+	# code that runs once for each file
+	if (FNR == 1) { 
+		File_count = 1
+		}
+	
+	# code that runs once for every line in the file
+
+	if ($3 == "ID") {  # print ID number header at start of each id pattern
+		print "" 
+		print"# Pattern ID " id_number++ "  " FILENAME " id " File_count
+		print "" 
+		File_count++
+		}
+		
+	if (NF ==3 ) { # only actual data has three fields so use that to find data
+
+		printf ( "0x%04X # %d \n",$3 ,$3) 
+		++overall_count
+		}
+	if (overall_count == 20) { # after 20 time slots fill rest with time 0
+		overall_count = 0
+		for ( i = 21; i <=64; i++){
+			printf ( "0x%04X #  %d \n",0 ,0) 
+			}
+			}
+}
+
+END { # code that only runs at end of program
+
+
+	
+}
+
+####################################################################################################3	
+#           Input file											:		Output file
+#	                                                            :    The files processed in order for the time jitter table are 
+# The LL ACENet Transmit Pattern Generator                      :        hop_set_1_20ms
+# generated the following Transmit Pattern Table...             :    
+#                                                               :    # Pattern ID 0  hop_set_1_20ms id 1
+# option -p pattern_number = 32                                 :    
+# option -scn sync_channel_number = 2                           :    0x0000 # 0 
+# option -dcn data_channel_number = 22                          :    0x0393 # 915 
+# option -fd frame_duration = 20 ms                             :    0x0A06 # 2566 
+# option -spn sync_pulse_number = 4                             :    0x1074 # 4212 
+# option -spd sync_pulse_duration = 160 us                      :    0x1661 # 5729 
+# option -dpn data_pulse_number = 16                            :    0x19E2 # 6626 
+# option -dpd data_pulse_duration = 192 us                      :    0x1C19 # 7193 
+# option -pgd pulse_guard_duration = 38 us                      :    0x1DFF # 7679 
+# option -s random_number_seed = 0                              :    0x1F12 # 7954 
+#                                                               :    0x2100 # 8448 
+# # data channels >= # data pulses, so ARE enforcing uniquern   :    0x241D # 9245 
+#                                                               :    0x2A9C # 10908 
+# Transmit Pattern ID = 0                                       :    0x2DA9 # 11689 
+#                                                               :    0x304C # 12364 
+# 	pulse	channel	offset (us)                                 :    0x3752 # 14162 
+#                                                               :    0x3998 # 14744 
+# 	0	0	0                                                   :    0x3E2D # 15917 
+# 	1	23	915                                                 :    0x40D3 # 16595 
+# 	2	0	2566                                                :    0x4A22 # 18978 
+# 	3	23	4212                                                :    0x4B56 # 19286 
+# 	4	14	5729                                                :    0x0000 #  0 
+# 	5	19	6626                                                :    0x0000 #  0 
+# 	6	9	7193                                                :    0x0000 #  0 
+# 	7	7	7679                                                :    0x0000 #  0 
+# 	8	2	7954                                                :    0x0000 #  0 
+# 	9	6	8448                                                :    0x0000 #  0 
+# 	10	11	9245                                                :    0x0000 #  0 
+# 	11	18	10908                                               :    0x0000 #  0 
+# 	12	8	11689                                               :    0x0000 #  0 
+# 	13	15	12364                                               :    0x0000 #  0 
+# 	14	22	14162                                               :    
+# 	15	4	14744                                               :    
+# 	16	20	15917                                               :    
+# 	17	12	16595                                               :    
+# 	18	16	18978                                               :    
+# 	19	13	19286                                               :    
+#                                                               :    

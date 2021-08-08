@@ -1,0 +1,31 @@
+#!/usr/bin/gawk -f
+# File: create_channel_hop_table.gwk
+# need Cubic header
+# $Author: garciag $.
+# $Date: 2018-05-29 11:28:06 -0700 (Tue, 29 May 2018) $.
+# $LastChangeDate$.
+# $Revision: 2906 $.
+# $HeadURL: file://usbalp-nis01/Homedirs/svnrepos/balboa_repo/5G-ATW/trunk/Firmware/Tx%20Hopping%20Pattern/shift_high_band_channels.gwk $.
+
+
+
+BEGIN {  # code that only run once at start of program
+
+        high_band_offset = 6
+}
+
+{ # code that runs once for every line in the file
+
+        if (($2 == "#") && ($3 < 63)){ 
+                        $3 = $3 + high_band_offset
+                        printf ( "0x%02X # %d \n",$3 ,$3)
+                        }
+        else {
+                print $0
+                }
+
+}
+
+END { # code that only runs at end of program
+        
+}

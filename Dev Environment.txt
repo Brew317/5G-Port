@@ -1,0 +1,33 @@
+On a windows 10 system install docker (www.docker.com)
+
+Create a subdirectory and copy the code in the subpages here using a programmer's edit (e.g. notepad++). Be sure the editor is setup for linux linefeed terminations and not windows CR/LF.
+	Dockerfile
+	Atw_tx_pattern_gen.cc
+	Build_combined_channel_set
+	Build_combined_time_set
+	Create_channel_table.gwk
+	Create_jitter_time_table.gwk
+	Shift_high_band_channels.gwk
+	
+	
+-----------------------------------------------------Dockerfile start---------------------------------------------------------------
+FROM alpine:latest
+# Was originally tested using  alpine:3.13.1 
+# digest @sha256:d6de6e6a9c2145e130764454005e254c91bd63657a0c0a03e8ba4d737a754a75
+
+LABEL authors="Gary Garcia garciag@cubic.com"
+
+RUN apk update && apk --no-cache add \
+	bash \
+	g++ \
+	gawk
+
+WORKDIR /home
+ENTRYPOINT ["/bin/bash"]
+----------------------------------------------------------Dockerfile end--------------------------------------------------------------------
+
+Command to build image from dockerfile  (replace hoptable with any name you wish)
+Docker build -t hoptable ./
+
+Command to run image  (c/code/hop is the location of your files e.g. ATW_tx_pattern_gen.cc )
+Docker run -it -v c/code/hop:/home --name gen hoptable
