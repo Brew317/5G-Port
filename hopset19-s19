@@ -1,0 +1,42 @@
+The LL ACENet Transmit Pattern Generator
+generated the following Transmit Pattern Table...
+
+option -p pattern_number = 1
+option -scn sync_channel_number = 2
+option -dcn data_channel_number = 2
+option -fd frame_duration = 5 ms
+option -spn sync_pulse_number = 4
+option -spd sync_pulse_duration = 160 us
+option -dpn data_pulse_number = 16
+option -dpd data_pulse_duration = 192 us
+option -pgd pulse_guard_duration = 38 us
+option -s random_number_seed = 19
+
+# data channels < # data pulses, so NOT enforcing unique channels per pattern
+
+Transmit Pattern ID = 0
+
+	pulse	channel	offset (us)
+
+	0	0	0
+	1	23	213
+	2	0	425
+	3	23	658
+	4	0	864
+	5	0	1126
+	6	23	1357
+	7	0	1591
+	8	23	1821
+	9	0	2177
+	10	0	2432
+	11	0	2712
+	12	23	2962
+	13	23	3193
+	14	23	3460
+	15	23	3699
+	16	0	3959
+	17	23	4248
+	18	0	4494
+	19	23	4732
+
+
